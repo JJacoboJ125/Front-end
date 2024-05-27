@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<h2 class="form-title">List of all competitors</h2>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Competitors</div>
+    <!-- Table -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Telephone</th>
+                <th>Cellphone</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="competitor in competitors| orderBy: 'id'">
+                <td>{{competitor.id}}</td>
+                <td>{{competitor.name}}</td>
+                <td>{{competitor.direccionTrabajo}}</td>
+                <td>{{competitor.direccion}}</td>
+                <td>{{competitor.telefono}}</td>
+                <td>{{competitor.correo}}</td>
+                <td>{{competitor.tipoUsuario}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
