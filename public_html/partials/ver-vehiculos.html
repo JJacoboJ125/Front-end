@@ -13,23 +13,23 @@ and open the template in the editor.
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Name</th>
-                <th>direccion de trabajo</th>
-                <th>direccion</th>
-                <th>telefono</th>
-                <th>Correo</th>
-                <th>tipo de usuario</th>
+                <th>Placa</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Capacidad</th>
+                <th>Carroceria</th>
+                <th>dueño</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="competitor in competitors| orderBy: 'id'">
                 <td>{{competitor.id}}</td>
-                <td>{{competitor.name}}</td>
-                <td>{{competitor.direccionTrabajo}}</td>
-                <td>{{competitor.direccion}}</td>
-                <td>{{competitor.telefono}}</td>
-                <td>{{competitor.correo}}</td>
-                <td>{{competitor.tipoUsuario}}</td>
+                <td>{{competitor.placa}}</td>
+                <td>{{competitor.marca}}</td>
+                <td>{{competitor.modelo}}</td>
+                <td>{{competitor.capacidadCar}}</td>
+                <td>{{competitor.tipoCarroceria}}</td>
+                <td>{{competitor.usuario_id.name}}</td>
             </tr>
         </tbody>
     </table>

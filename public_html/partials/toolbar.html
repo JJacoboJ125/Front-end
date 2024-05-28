@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="path/to/bootstrap.min.css">
-    <script src="path/to/angular.min.js"></script>
-    <script src="path/to/app.js"></script>
-</head>
-<body ng-app="aplicacionMundial">
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="path/to/bootstrap.min.css">
+        <script src="path/to/angular.min.js"></script>
+        <script src="path/to/app.js"></script>
+    </head>
+    <body ng-app="aplicacionMundial">
 
-<!-- Navbar -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href ng-click="toolbar.selectTab(0)"> <span class="glyphicon glyphicon-bullhorn"></span>Transporte LJ </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li ng-class="{active:toolbar.isSelected(1)}">
-                    <a href ng-click="toolbar.selectTab(1)"> <span class="glyphicon glyphicon-plus"></span> Participar</a>
-                </li>
-                <li ng-class="{active:toolbar.isSelected(2)}">
-                    <a href ng-click="toolbar.selectTab(2)"> <span class="glyphicon glyphicon-th-list"></span> Ver todos los usuarios</a>
-                </li>
-                <li ng-class="{active:toolbar.isSelected(3)}">
-                    <a href ng-click="toolbar.selectTab(3)">
-                        <span class="glyphicon glyphicon-log-in"></span>
-                        {{loggedInAddress ? loggedInAddress : 'Log-in'}}
-                    </a>
-                </li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
+        <!-- Navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href ng-click="toolbar.selectTab(0)"> <span class="glyphicon glyphicon-bullhorn"></span>Transporte LJ </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li ng-class="{active:toolbar.isSelected(1)}">
+                            <a href ng-click="toolbar.selectTab(1)"> <span class="glyphicon glyphicon-plus"></span> Participar</a>
+                        </li>
+                        <li ng-class="{active:toolbar.isSelected(2)}">
+                            <a href ng-click="toolbar.selectTab(2)"> <span class="glyphicon glyphicon-th-list"></span> Ver todos los usuarios</a>
+                        </li>
+                        <li ng-class="{active:toolbar.isSelected(3)}">
+                            <a href ng-click="toolbar.selectTab(3)">
+                                <span class="glyphicon glyphicon-log-in"></span>
+                                {{loggedInAddress ? loggedInAddress : 'Log-in'}}
+                            </a>
+                        </li>
+                        <li ng-class="{active:toolbar.isSelected(4)}">
+                            <a href ng-click="toolbar.selectTab(4)">
+                                <span class="glyphicon glyphicon-log-out"></span>
+                                eliminar usuario
+                            </a>
+                        </li>
+                        <li ng-class="{active:toolbar.isSelected(5)}">
+                            <a href ng-click="toolbar.selectTab(5)">
+                                <span class="glyphicon glyphicon-log-out"></span>
+                                añadir vehiculo
+                            </a>
+                        </li>
+                        <li ng-class="{active:toolbar.isSelected(6)}">
+                            <a href ng-click="toolbar.selectTab(6)">
+                                <span class="glyphicon glyphicon-log-out"></span>
+                                ver vehiculos
+                            </a>
+                        </li>
+                        <li ng-class="{active:toolbar.isSelected(7)}">
+                            <a href ng-click="toolbar.selectTab(7)">
+                                <span class="glyphicon glyphicon-log-out"></span>
+                                añadir carga
+                            </a>
+                        </li>
+                        <li ng-class="{active:toolbar.isSelected(8)}">
+                            <a href ng-click="toolbar.selectTab(8)">
+                                <span class="glyphicon glyphicon-log-out"></span>
+                                ver cargas
+                            </a>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
 
-</body>
+    </body>
 </html>

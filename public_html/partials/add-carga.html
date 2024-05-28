@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<form name="cargaForm" ng-submit="addcarga()" ng-controller="cargasCtrl"
+      novalidate>
+    <h2 class="form-title">Registrate, conductor</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <label>Name:</label>
+            <input ng-model="carga.fecha" type="text" class="form-control" required/>
+        </div>
+        <div class="col-md-6">
+            <label>dueño de la carga:</label>
+            <input ng-model="carga.idUsCarga" type="text" class="form-control" required/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>ciudad Origen:</label>
+            <input ng-model="carga.origenCiudad" type="number" class="form-control" required/>
+        </div>
+        <div class="col-md-6">
+            <label>contraseña: </label>
+            <input ng-model="carga.DestinoCiudad" type="password" class="form-control" required/>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-md-6">
+            <label>Correo:</label>
+            <input ng-model="carga.alto" type="number" class="form-control" required/>
+        </div>
+        <div class="col-md-6">
+            <label>contraseña: </label>
+            <input ng-model="carga.largo" type="password" class="form-control" required/>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-md-6">
+            <label>Correo:</label>
+            <input ng-model="carga.ancho" type="number" class="form-control" required/>
+        </div>
+        <div class="col-md-6">
+            <label>contraseña: </label>
+            <input ng-model="carga.peso" type="password" class="form-control" required/>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-md-6">
+            <label>Correo:</label>
+            <input ng-model="carga.valorSeguro" type="number" class="form-control" required/>
+        </div>
+    </div>
+    <input type="submit" value="submit" class="btn btn-default">
+</form>
+

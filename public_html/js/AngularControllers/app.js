@@ -121,7 +121,65 @@ aplicacionMundial.controller("conductorCtrl", function ($http, $scope) {
     };
 });
 
+aplicacionMundial.directive('eliminarUsr', function () {
+    return{
+        restrict: 'E',
+        templateUrl: 'partials/DeleteUsr.html',
+        controller: 'elimiarUsrCtrl'
+    };
+});
+aplicacionMundial.controller("elimiarUsrCtrl", function ($http, $scope) {
+    $scope.removeUsr = function () {
+        console.log('holaaaaaaaaaaa');
+        $http.get('http://localhost:8080/backend/usrActive').
+            success(function (data, status, headers, config) {
+                $scope.idusr = data;
+                
+            }).
+            error(function (data, status, headers, config) {
+            });
+        $http.delete('http://localhost:8080/backend/deleteUser/'+idusr).success(function (data, headers) {
+            console.log(idusr)
+            $scope.toolbar.selectTab(2);
+        });
+    };
+});
 
+aplicacionMundial.directive('vehiculoForm', function () {
+    return{
+        restrict: 'E',
+        templateUrl: 'partials/add-vehiculo.html',
+        controller: 'vehiculoCtrl'
+    };
+});
+aplicacionMundial.controller("vehiculoCtrl", function ($http, $scope) {
+    $scope.addvehiculo = function () {
+        console.log('name');
+        $http.post('http://localhost:8080/backend/addVe',
+                JSON.stringify($scope.vehiculo)).success(function (data, headers) {
+            $scope.vehiculo = {};
+            $scope.toolbar.selectTab(2);
+        });
+    };
+});
+
+aplicacionMundial.directive('cargasForm', function () {
+    return{
+        restrict: 'E',
+        templateUrl: 'partials/add-vehiculo.html',
+        controller: 'cargasCtrl'
+    };
+});
+aplicacionMundial.controller("cargasCtrl", function ($http, $scope) {
+    $scope.addcarga = function () {
+        console.log('name');
+        $http.post('http://localhost:8080/backend/addVe',
+                JSON.stringify($scope.carga)).success(function (data, headers) {
+            $scope.carga = {};
+            $scope.toolbar.selectTab(2);
+        });
+    };
+});
 
 
 
